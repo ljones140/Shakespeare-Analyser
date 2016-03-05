@@ -19,6 +19,11 @@ describe AnalysisEngine do
         <LINE>When shall we three meet again</LINE>
         <LINE>In thunder, lightning, or in rain?</LINE>
       </SPEECH>
+      <SPEECH>
+        <SPEAKER>Second Witch</SPEAKER>
+        <LINE>When shall we three meet again</LINE>
+        <LINE>In thunder, lightning, or in rain?</LINE>
+      </SPEECH>
     </SCENE>
   </ACT>
 </PLAY>
@@ -27,8 +32,8 @@ EOF
 
   describe '#analyse' do
 
-    it 'returns the speaker name' do
-      expect(analysis_engine.analyse).to eq("First Witch")
+    it 'returns the speakers names' do
+      expect(analysis_engine.analyse).to eq(["First Witch", "Second Witch"])
     end
 
   end
