@@ -32,8 +32,11 @@ EOF
 
   describe '#analyse' do
 
-    it 'returns the speakers names' do
-      expect(AnalysisEngine.analyse(xml_content)).to eq(["First Witch", "Second Witch"])
+    it 'returns the speakers names with line amount' do
+      expect(AnalysisEngine.analyse(xml_content)).to eq({
+        "First Witch"  => 2,
+        "Second Witch" => 2,
+      })
     end
 
   end
