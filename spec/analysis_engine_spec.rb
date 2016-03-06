@@ -33,7 +33,7 @@ EOF
   describe '#analyse' do
 
     it 'returns the speakers names' do
-      expect(analysis_engine.analyse).to eq(["First Witch", "Second Witch"])
+      expect(AnalysisEngine.analyse(xml_content)).to eq(["First Witch", "Second Witch"])
     end
 
   end
