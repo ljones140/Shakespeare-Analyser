@@ -1,3 +1,5 @@
+Dir["./lib/*.rb"].each {|file| require file }
+
 RSpec.configure do |config|
   original_stderr = $stderr
   original_stdout = $stdout

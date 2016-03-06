@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'xml_downloader'
 
 describe XmlDownloader do
 

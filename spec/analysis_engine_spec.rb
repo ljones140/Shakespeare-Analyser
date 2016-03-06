@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'analysis_engine'
 
 describe AnalysisEngine do
   let(:xml_content) do

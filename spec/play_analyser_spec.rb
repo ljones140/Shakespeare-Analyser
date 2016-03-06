@@ -1,4 +1,3 @@
-require 'play_analyser'
 require 'spec_helper'
 
 describe PlayAnalyser do
