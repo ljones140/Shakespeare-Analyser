@@ -2,9 +2,6 @@ require 'spec_helper'
 require 'analysis_engine'
 
 describe AnalysisEngine do
-
-  let(:analysis_engine) { described_class.new(xml_content) }
-
   let(:xml_content) do
     <<-EOF
 <PLAY>
