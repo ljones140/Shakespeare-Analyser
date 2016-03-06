@@ -6,12 +6,14 @@ class AnalysisEngine
     new(play_script_xml).send(:analyse)
   end
 
-  private
-
   def initialize(play_script_xml)
     @script_document = Document.new(play_script_xml)
     @results = {}
   end
+
+  private_class_method :new
+
+  private
 
   def analyse
     calculate_lines_per_character
@@ -20,7 +22,7 @@ class AnalysisEngine
 
   def calculate_lines_per_character
     @script_document.elements.each('PLAY/ACT/SCENE/SPEECH') do |speech|
-      add_to_results(name(speech), line_count(speech)) if name(speech) != 'ALL'
+      add_to_results(name(speech), line_count(speech)) unless name(speech) == 'ALL'
     end
   end
 

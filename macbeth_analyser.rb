@@ -1,1 +1,2 @@
-puts "hello"
+Dir["./lib/*.rb"].each {|file| require file }
+PlayAnalyser.new(downloader: XmlDownloader, analysis_engine: AnalysisEngine).analyse_play("http://www.ibiblio.org/xml/examples/shakespeare/macbeth.xml")
