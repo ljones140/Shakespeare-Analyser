@@ -1,6 +1,3 @@
-require './lib/xml_downloader.rb'
-require './lib/analysis_engine.rb'
-
 class PlayAnalyser
 
   def initialize(downloader:, analysis_engine:)
